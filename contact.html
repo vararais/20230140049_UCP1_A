@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak Learntastic</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Learntastic</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="features.html">Fitur</a></li>
+        <li><a href="contact.html" class="active">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <section class="contact-form">
+      <h2>Form Pendaftaran</h2>
+      <form id="registrationForm">
+        <div class="form-group">
+          <label>Nama Lengkap:</label>
+          <input type="text" name="nama" required />
+        </div>
+        <div class="form-group">
+          <label>Email:</label>
+          <input type="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label>Minat Bahasamu:</label>
+          <select name="minat" required>
+            <option value="">Pilih Bahasamu</option>
+            <option>Inggris</option>
+            <option>Jerman</option>
+            <option>Rusia</option>
+            <option>Jepang</option>
+          </select>
+        </div>
+        <button type="submit">Kirim Pendaftaran</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Akira 99 - Semua Hak Cipta Dilindungi</p>
+    </footer>
+
+    <script>
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Pesan anda terkirim!");
+          this.reset();
+        });
+
+      // popup setelah 3 detik
+      setTimeout(function () {
+        const popup = document.getElementById("promoPopup");
+        if (popup) {
+          popup.style.display = "block";
+        }
+      }, 3000);
+
+      // nutup popup saat tombol close diklik
+      const closeButton = document.querySelector(".close");
+      if (closeButton) {
+        closeButton.addEventListener("click", function () {
+          document.getElementById("promoPopup").style.display = "none";
+        });
+      }
+    </script>
+  </body>
+</html>

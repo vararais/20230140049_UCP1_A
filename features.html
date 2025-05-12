@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitur Learntastic</title>
+    <style>
+      html,
+      body {
+        height: auto;
+        min-height: 100%;
+        overflow-x: hidden;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        line-height: 1.6;
+        background: linear-gradient(to right, #c1c1c1, #c1c1c1);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 5%;
+        background: #5c522d;
+        position: relative;
+        height: 60px;
+      }
+
+      .logo {
+        color: white;
+        font-size: 1.7rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        display: flex;
+        align-items: center;
+        }   
+  
+        nav ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        }
+  
+        nav ul li {
+        position: relative;
+        }
+  
+        nav a {
+        color: rgba(255, 255, 255, 0.9);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-weight: 500;
+        display: inline-block;
+        position: relative;
+    }
+  
+        nav a:hover,
+        nav a.active {
+        color: white;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+      .feature-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 2rem 5%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .feature-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        background: white;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .feature-img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+
+      .feature-text {
+        padding: 1.5rem;
+      }
+
+      .feature-text h3 {
+        margin-top: 0;
+        color: #2c3e50;
+      }
+
+      .video-container {
+        margin: 2rem auto 4rem;
+        max-width: 800px;
+        padding: 0 5%;
+      }
+
+      .video-container h2 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+      }
+
+      iframe {
+        width: 100%;
+        height: 450px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        background: #5c522d;
+        color: white;
+        text-align: center;
+        padding: 1.5rem;
+        margin-top: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Learntastic</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="features.html" class="active">Fitur</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <div class="feature-gallery">
+      <div class="feature-card">
+        <img
+          src="assets/Kevin.jpeg"
+          alt="Fitur 1"
+          class="feature-img"
+        />
+        <div class="feature-text">
+          <h3>Bahasa Lengkap</h3>
+          <p>
+            Belajar bahasa paling lengkap, termasuk slang, singkatan, dan
+            bahasa kalcer negara pilihanmu
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <img
+          src="assets/Ryan.jpeg"
+          alt="Fitur 2"
+          class="feature-img"
+        />
+        <div class="feature-text">
+          <h3>Belajar Interaktif</h3>
+          <p>
+            Praktik langsung di browser dengan instant feedback untuk
+            mempercepat proses pembelajaran Anda
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-gallery">
+        <div class="feature-card">
+          <img
+            src="assets/Ishowspeed.jpeg"
+            alt="Fitur 1"
+            class="feature-img"
+          />
+          <div class="feature-text">
+            <h3>Ada audio pengucapan</h3>
+            <p>
+                Membuat anda lebih mudah dalam pengucapan, termasuk posisi
+                lidah dan bibir biar ga keliatan KAMPUNG
+            </p>
+          </div>
+        </div>
+
+    <div class="feature-card">
+        <img
+          src="assets/denis.jpeg"
+          alt="Fitur 4"
+          class="feature-img"
+        />
+        <div class="feature-text">
+          <h3>Anda bisa minta mentor untuk menguji anda</h3>
+          <p>
+            Membuat anda lebih yakin dan percaya diri,
+            agar tidak malu
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-container">
+      <h2>Ave semua! Sambutan dari Sesepuh kami</h2>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VAWt0OJ65Bc?si=Hga9zMVXeUqE7Iph"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Akira 99 - Semua Hak Cipta Dilindungi</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
